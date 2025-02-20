@@ -82,6 +82,4 @@ The infrastructure is defined using Terraform. The pipeline checks for changes i
 - Monitoring & Performance: Monitored and ensured optimal performance by setting up CloudWatch Alarms to track the health of both Web-tier and App-tier instances, proactively addressing resource utilization and performance bottlenecks.
 
 
-......................................................
-
 
