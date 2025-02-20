@@ -7,6 +7,7 @@ abc-technology123 Website is a highly available, scalable web application deploy
 
 ### **Author**
 - Paul Max Chamblain | 
+
 [Linkedin] (https://www.linkedin.com/in/paulmchamblain/)
 
 ### Below is an image showcasing the architecture of the cloud-based application I built.
