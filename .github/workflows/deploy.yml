@@ -1,0 +1,44 @@
+
+name: Terraform Apply
+
+on:
+  push:
+    branches:
+      - main   # Run when code is pushed to the 'main' branch
+      
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Terraform
+      uses: hashicorp/setup-terraform@v2
+      with:
+        terraform_version: '1.5.0'
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}  # Correct input for Access Key ID
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  # Correct input for Secret Access Key
+        aws-region: ${{ secrets.AWS_REGION }}  # Correct input for AWS Region
+
+    - name: Initialize Terraform
+      run: terraform init
+      working-directory: ./tech123
+
+    - name: Plan Terraform deployment
+      run: terraform plan
+      working-directory: ./tech123
+
+    - name : apply Terraform deployment
+      run : terraform apply -auto-approve
+      working-directory: ./tech123
+
+    #- name: destroy Terraform deployment
+    #  run: terraform destroy -auto-approve
+    # working-directory: ./abc-technology123 
+      
