@@ -11,7 +11,7 @@ abc-technology123 Website is a highly available, scalable web application deploy
 
 ### Below is an image showcasing the architecture of the cloud-based application I built.
 
-![Project Image](tech123/Image/2tier.gif)
+![Project Image](tech123/Image/3tier.gif)
 
 ### Key Features & Architecture:
 The application follows a 3-tier architecture:
