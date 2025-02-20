@@ -17,7 +17,7 @@ variable "private_subnets_cidr" {
 
 variable "db_subnets_cidr" {
   type = list(string)
-  
+
 }
 variable "availability_zones" {
   type = list(string)
@@ -25,4 +25,8 @@ variable "availability_zones" {
 
 variable "region" {
   type = string
+}
+
+variable "my_ip" {
+  type = list(string)
 }
